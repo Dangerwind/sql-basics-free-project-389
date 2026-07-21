@@ -1,4 +1,4 @@
-SELECT (name, price)
+SELECT name, price
 FROM products
 ORDER BY price DESC
 LIMIT 3;

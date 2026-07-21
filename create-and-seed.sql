@@ -1,10 +1,10 @@
 CREATE TABLE products (
-  id	BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+  id	INTEGER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
   name VARCHAR NOT NULL, 
   category VARCHAR NOT NULL,
   brand VARCHAR,
   sku	VARCHAR	NOT NULL UNIQUE,
-  price REAL NOT NULL CHECK(price >= 0),
+  price NUMERIC(10, 2) NOT NULL CHECK(price >= 0),
   stock	INT	NOT NULL DEFAULT 0 CHECK(stock >= 0),
   rating REAL CHECK(rating >= 0 AND	rating <= 5),
   discount REAL,

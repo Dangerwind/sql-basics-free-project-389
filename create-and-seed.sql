@@ -6,7 +6,7 @@ CREATE TABLE products (
   sku	VARCHAR	NOT NULL UNIQUE,
   price NUMERIC(10, 2) NOT NULL CHECK(price >= 0),
   stock	INT	NOT NULL DEFAULT 0 CHECK(stock >= 0),
-  rating REAL CHECK(rating >= 0 AND	rating <= 5),
+  rating NUMERIC(10, 1) CHECK(rating >= 0 AND	rating <= 5),
   discount NUMERIC(10, 1),
   created_at TIMESTAMP
 );
